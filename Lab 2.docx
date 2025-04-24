@@ -1,0 +1,82 @@
+Aim: Create a directory Vehicle. Enter Vehicle and create three more directories with names FourWheelers, ThreeWheelers and TwoWheelers. Enter FourWheeler, create directories car, bus and truck. In ThreeWheeler, create directory auto and in TwoWheelers, create directories cycle and scooty. In car directory, create files carnames.txt, busnames.txt, trucknames.txt, autocolor.txt and cyclenames.txt. Move all files in the correct directories. Also remove truck directory.
+localhost:~# mkdir Vehicle
+localhost:~# ls
+Vehicle     bench.py    hello.c     hello.js    readme.txt
+localhost:~# cd Vehicle
+localhost:~/Vehicle# mkdir FourWheelers
+localhost:~/Vehicle# mkdir ThreeWheelers
+localhost:~/Vehicle# mkdir TwoWheelers
+localhost:~/Vehicle# ls
+FourWheelers   ThreeWheelers  TwoWheelers
+localhost:~/Vehicle# cd FourWheelers
+localhost:~/Vehicle/FourWheelers# mkdir car
+localhost:~/Vehicle/FourWheelers# mkdir bus
+localhost:~/Vehicle/FourWheelers# mkdir truck
+localhost:~/Vehicle/FourWheelers# ls
+bus    car    truck
+localhost:~/Vehicle/FourWheelers# cd ..
+localhost:~/Vehicle# cd ThreeWheelers
+localhost:~/Vehicle/ThreeWheelers# mkdir auto
+localhost:~/Vehicle/ThreeWheelers# ls
+auto
+localhost:~/Vehicle/ThreeWheelers# cd ..
+localhost:~/Vehicle# cd TwoWheelers
+localhost:~/Vehicle/TwoWheelers# mkdir cycle
+localhost:~/Vehicle/TwoWheelers# mkdir scooty
+localhost:~/Vehicle/TwoWheelers# ls
+cycle   scooty
+localhost:~/Vehicle/TwoWheelers# cd ..
+localhost:~/Vehicle# cd FourWheelers
+localhost:~/Vehicle/FourWheelers# cd car
+localhost:~/Vehicle/FourWheelers/car# touch carnames.txt
+localhost:~/Vehicle/FourWheelers/car# cat > carnames.txt
+Mercedes
+Volvo
+localhost:~/Vehicle/FourWheelers/car# touch busnames.txt
+localhost:~/Vehicle/FourWheelers/car# cat > busnames.txt
+JBM Auto
+Eicher Motors
+localhost:~/Vehicle/FourWheelers/car# touch trucknames.txt
+localhost:~/Vehicle/FourWheelers/car# cat > trucknames.txt
+Tata Motors
+Mahindra
+localhost:~/Vehicle/FourWheelers/car# touch autocolor.txt
+localhost:~/Vehicle/FourWheelers/car# cat > autocolor.txt
+black
+yellow
+localhost:~/Vehicle/FourWheelers/car# touch cyclenames.txt
+localhost:~/Vehicle/FourWheelers/car# cat > cyclenames.txt
+Kross
+BSA
+localhost:~/Vehicle/FourWheelers/car# ls
+autocolor.txt   busnames.txt    carnames.txt    cyclenames.txt  trucknames.txt
+localhost:~/Vehicle/FourWheelers/car# mv autocolor.txt ../../ThreeWheelers/auto
+localhost:~/Vehicle/FourWheelers/car# ls
+busnames.txt    carnames.txt    cyclenames.txt  trucknames.txt
+localhost:~/Vehicle/FourWheelers/car# mv busnames.txt ../bus
+localhost:~/Vehicle/FourWheelers/car# ls
+carnames.txt    cyclenames.txt  trucknames.txt
+localhost:~/Vehicle/FourWheelers/car# mv cyclenames.txt ../../TwoWheelers/cycle
+localhost:~/Vehicle/FourWheelers/car# ls
+carnames.txt    trucknames.txt
+localhost:~/Vehicle/FourWheelers/car# mv trucknames.txt ../truck
+localhost:~/Vehicle/FourWheelers/car# ls
+carnames.txt
+localhost:~/Vehicle/FourWheelers/car# cd ..
+localhost:~/Vehicle/FourWheelers# ls
+bus    car    truck
+localhost:~/Vehicle/FourWheelers# rm -rf truck
+localhost:~/Vehicle/FourWheelers# ls
+bus  car
+
+List of Commands:
+1. grep – Search for a pattern in files
+localhost:~# grep "console" hello.js
+2. ps – Display information about active processes
+localhost:~# ps
+3. df – Display disk space usage
+localhost:~# df
+4. history – Show Command History
+localhost:~# history
+5. sudo – Execute a command with super user privileges
+localhost:~# sudo -h
